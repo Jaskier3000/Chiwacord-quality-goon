@@ -11,3 +11,13 @@ judaism_resurgence = {
 	local_missionary_strength = -0.02
 	local_religious_unity_contribution = -1
 }
+qol_colonists = {
+	colonists = 1
+	range = 0.5
+	global_colonial_growth = 15
+	may_explore = yes
+}
+por_exploration = {
+	range = 0.5
+	global_colonial_growth = 15
+}

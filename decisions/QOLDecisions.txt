@@ -369,3 +369,127 @@ add_all_provinces_to_seats = {
   		ai_will_do = {factor = 0}
   	}
 }
+
+qol_eur_colonists = {
+  color = { 66 245 242 }
+
+  potential = {
+    ai =  no
+    adm_tech = 5
+    dip_tech = 5
+    capital_scope = {
+      OR = {
+        continent = north_america
+        continent = europe
+        continent = south_america
+      }
+    }
+    NOT = { has_country_modifier = qolu_2colonists }
+    NOT = { tag = OIR }
+    NOT = { tag = MJZ }
+    NOT = { tag = MCH }
+    NOT = { has_reform = steppe_horde }
+  }
+
+  allow = {
+    adm_tech = 5
+
+    dip_power = 50
+  }
+
+  effect = {
+    add_dip_power = -50
+
+    add_country_modifier = {
+      name = qol_colonists
+      duration = -1
+    }
+  }
+}
+
+qol_afr_colonists = {
+  color = { 66 245 242 }
+
+  potential = {
+    ai =  no
+    adm_tech = 7
+
+    capital_scope = {
+      continent = africa
+    }
+    NOT = { has_country_modifier = qolu_2colonists }
+    NOT = { tag = OIR }
+    NOT = { tag = MJZ }
+    NOT = { tag = MCH }
+    NOT = { has_reform = steppe_horde }
+  }
+
+  allow = {
+    adm_tech = 7
+
+    dip_power = 50
+  }
+
+  effect = {
+    add_dip_power = -50
+
+    add_country_modifier = {
+      name = qol_colonists
+      duration = -1
+    }
+  }
+}
+
+qol_asia_colonists = {
+  color = { 66 245 242 }
+
+  potential = {
+    ai =  no
+    adm_tech = 7
+
+    capital_scope = {
+      continent = asia
+    }
+    NOT = { has_country_modifier = qolu_2colonists }
+    NOT = { tag = OIR }
+    NOT = { tag = MJZ }
+    NOT = { tag = MCH }
+    NOT = { has_reform = steppe_horde }
+  }
+
+  allow = {
+    adm_tech = 7
+
+    dip_power = 50
+  }
+
+  effect = {
+    add_dip_power = -50
+
+    add_country_modifier = {
+      name = qol_colonists
+      duration = -1
+    }
+  }
+}
+
+qol_por_day1colonist = {
+  color = { 66 245 242 }
+
+  potential = {
+    tag = POR
+    NOT = { has_country_modifier = por_exploration }
+  }
+
+  allow = {
+    always = yes
+  }
+
+  effect = {
+    add_country_modifier = {
+      name = por_exploration
+      duration = 18250
+    }
+    create_explorer = { tradition = 10 }
+  }
+}

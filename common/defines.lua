@@ -21,8 +21,8 @@ NGame = {
 
 	SIZE_LIMIT_FOR_ISLANDS = 45000,			-- Threshold in pixels to define what is an island and what is a continent
 
-	DAYS_BEHIND_PAUSE = 90,					-- In multiplayer, if the slowest player is lagging behind this amount of days, the game will pause
-	DAYS_BEHIND_LOWER_SPEED = 30,			-- In multiplayer, if the slowest player is lagging behind this amount of days, the game will slow down
+	DAYS_BEHIND_PAUSE = 120,					-- In multiplayer, if the slowest player is lagging behind this amount of days, the game will pause
+	DAYS_BEHIND_LOWER_SPEED = 90,			-- In multiplayer, if the slowest player is lagging behind this amount of days, the game will slow down
 
 	MERC_COMPANIES_PER_RNW_REGION = 5, 		-- auto-generated merc companies per region in RNW
 	RNW_MERC_COMPANY_MODIFIER_CHANCE = 0.33, -- chance of a modifier being applied to a RNW mercenary company
@@ -127,7 +127,7 @@ NDiplomacy = {
 	MAX_FREE_CITIES = 12,
 	MIN_NUM_ELECTORS_FOR_REMOVE_ELECTORATE = 2,		-- Limit is inclusive.
 	HRE_PRINCE_AUTHORITY_THRESHOLD = 25,			-- Threshold below which you lose IA, and above which you gain it
-	IMPERIAL_AUTHORITY_FROM_PRINCES = 0.075,			-- Scales to threshold
+	IMPERIAL_AUTHORITY_FROM_PRINCES = 0.08,			-- Scales to threshold
 	HRE_FOREIGN_CONTROL_PENALTY = -0.005,			-- Each foreign-controlled province in the empire (owned or vassalised) lowers IA by this amount
 	HRE_HERETIC_PENALTY = -0.01,					-- Per heretic prince (halved by Peace of Westphalia)
 	LACK_OF_ELECTORS_HIT = -0.1,					-- Also applied to vassalized electors
@@ -359,7 +359,7 @@ NDiplomacy = {
 	INTEGRATE_UNION_MIN_YEARS = 50,					-- Number of years before a union can be integrated
 	INTEGRATE_VASSAL_MIN_YEARS = 10,				-- Number of years before a vassal can be integrated
 
-	MONTHS_BEFORE_TOTAL_OCCUPATION = 18,			-- Before this many months have passed in the war, you cannot gain 100% warscore by just occupying the warleader
+	MONTHS_BEFORE_TOTAL_OCCUPATION = 12,			-- Before this many months have passed in the war, you cannot gain 100% warscore by just occupying the warleader
 
 	WAR_REPARATIONS_FACTOR = 0.1,
 	WAR_REPARATIONS_YEARS = 10,
@@ -387,7 +387,7 @@ NDiplomacy = {
 	GRANT_ELECTORATE_INFLUENCE = 0,					-- The amount of AI Grant Electorate gives.
 	GRANT_FREECITY_INFLUENCE = 0,					-- The amount of IA Grant Free Gity gives.
 	REMOVE_FREECITY_INFLUENCE_COST = 5,				-- The amount of IA Grant Free Gity costs.
-	IMPERIAL_CITY_IA = 0.005,						-- Monthly per imperial free city
+	IMPERIAL_CITY_IA = 0.075,						-- Monthly per imperial free city
 
 	AGITATE_FOR_LIBERTY_DESIRE = 25,				-- Liberty Desire gained due to ongoing agitation.
 	AGITATE_FOR_LIBERTY_RATE = 1,					-- Monthly rate at which Liberty Desire rises towards the maximum during agitation, or otherwise falls towards zero.
@@ -483,8 +483,8 @@ NCountry = {
 	CLEAR_PROVINCE_FLAGS_ON_CLEAR_OWNER = 1,	 	--set to 0 to avoid clearing province flags when a province's owner is set to none (modder request)
 	CLEAR_PROVINCE_SAVED_NAMES_ON_CLEAR_OWNER = 1, 	--set to 0 to avoid clearing province saved names when a province's owner is set to none (modder request)
 	CREATE_LEADER_FROM_CONSORT_PRESTIGE_COST = 10,
-	EXPLOIT_ADM_INCOME = 60,	-- months of income
-	EXPLOIT_DIP_SAILORS = 6,
+	EXPLOIT_ADM_INCOME = 65,	-- months of income
+	EXPLOIT_DIP_SAILORS = 10,
 	EXPLOIT_MIL_MANPOWER = 6,
 	EXPLOIT_COOLDOWN_MONTHS = 240,
 
@@ -601,7 +601,7 @@ NCountry = {
 	PRIMARY_NATION_BLOCK_CONVERT_CULTURE = 0,	-- Does primary nation of a tag existing block converting culture?
 
 	MIN_DEV_FOR_FREE_CITY = 10,					-- Capital must have at least this much development to be a free city
-	MAX_PROVINCES_FOR_FREE_CITY = 1,			-- A free city cannot have more provinces than this
+	MAX_PROVINCES_FOR_FREE_CITY = 2,			-- A free city cannot have more provinces than this
 
 	HRE_RANK = 3,								-- Emperor of the HRE is displayed as this rank (for ruler title only)
 	HRE_MAX_RANK = 1,							-- for members
@@ -635,7 +635,7 @@ NCountry = {
 
 	ALLOW_FEMALE_GENERALS = 0,
 	FEMALE_ADVISOR_CHANCE = 2,						-- If Women in History is enabled, chance of an advisor (or general if permitted) spawning as female
-	MAX_IDEA_GROUPS_FROM_SAME_CATEGORY = 0.5,
+	MAX_IDEA_GROUPS_FROM_SAME_CATEGORY = 0.4,
 
 	RANDOM_LUCKY_BASE_WEIGHT = 100,					-- Base weight given to each nation when rolling for random lucky
 	RANDOM_LUCKY_DEVELOPMENT_WEIGHT = 0.4,			-- Extra weight given for each base development when rolling for random luck
@@ -744,8 +744,8 @@ NCountry = {
 	PS_BUY_CONQUISTADOR = 50,
 	PS_BUY_EXPLORER = 50,
 	PS_ASSAULT = 5,
-	PS_ARTILLERY_BARRAGE = 50,
-	PS_NAVAL_BARRAGE = 50,
+	PS_ARTILLERY_BARRAGE = 40,
+	PS_NAVAL_BARRAGE = 40,
 	PS_ADD_TRIBAL_LAND = 100,
 	PS_ADD_TRIBAL_LAND_EXTRA_COST_PER_PROVINCE = 10,
 	PS_FORCE_MARCH = 2,
@@ -754,7 +754,7 @@ NCountry = {
 	PS_DEMAND_NON_WARGOAL_PEACE_PRIMITIVES = 0,
 	PS_MAKE_PROVINCE_CORE = 10,
 	PS_REDUCE_INFLATION = 75,
-	PS_PROMOTE_MERCANTILISM = 100,
+	PS_PROMOTE_MERCANTILISM = 75,
 	PS_MOVE_CAPITAL = 200,
 	PS_MOVE_CAPITAL_EXTRA = 20,						-- Per 100 country development.
 	PS_MOVE_CAPITAL_DISTANCE = 10,					-- How many pixels distance per 1 Adm.
@@ -768,7 +768,7 @@ NCountry = {
 	PS_CHANGE_GOVERNMENT = 100,
 	PS_CHANGE_CULTURE = 10,
 	PS_CHANGE_CULTURE_OVERSEAS_RELIGION_MOD = -0.8,	-- Modifier how much cheaper it is to change culture in overseas province if same religion
-	PS_HARSH_TREATMENT_COST = 200,					-- Max cost for harsh treatment (scales to revolt size)
+	PS_HARSH_TREATMENT_COST = 100,					-- Max cost for harsh treatment (scales to revolt size)
 	PS_HARSH_TREATMENT_REDUCE = 30,
 	PS_GARRISON_SORTIES = 10,
 	PS_REDUCE_WAREXHAUSTION = 75,
@@ -816,8 +816,8 @@ NCountry = {
 
 	DISHONOURED_ALLIANCE_DURATION = 1800,
 
-	CALL_ALLY_DECLINE_PRESTIGE_PENALTY = -25.0,		-- Prestige penalty for declining call for arms
-	CLAIM_THRONE_PRESTIGE_PENALTY = -20.0,			-- Prestige penalty when claiming throne
+	CALL_ALLY_DECLINE_PRESTIGE_PENALTY = 0,		-- Prestige penalty for declining call for arms
+	CLAIM_THRONE_PRESTIGE_PENALTY = 15,			-- Prestige penalty when claiming throne
 	BREAK_VASSAL_PRESTIGE_PENALTY = -25.0,			-- Prestige penalty when break vassalisation
 	BREAK_MARRIAGE_PRESTIGE_PENALTY = -10,			-- Prestige penalty when break royal marriage
 	BREAK_MARRIAGE_STABILITY_PENALTY = -1,			-- Stability penalty when break royal marriage
@@ -998,7 +998,7 @@ NCountry = {
 	PILLAGE_CAPITAL_MAX_DEV_PILLAGED = 2,
 	NATIVE_UPRISING_COOLDOWN_MONTHS = 12,
 	NATIVE_UPRISING_CHANCE_PER_AGGRESSIVENESS = 1.0,
-	MIN_POPULATION_FOR_TRADEGOOD_ASSIGNMENT = 400,
+	MIN_POPULATION_FOR_TRADEGOOD_ASSIGNMENT = 900,
 	DEBT_LIMIT_ADM = -100,							-- This is how far you can go into debt on ADM for actions that allow spending power you don't have.
 	DEBT_LIMIT_DIP = -999,							-- This is how far you can go into debt on DIP for actions that allow spending power you don't have.
 	DEBT_LIMIT_MIL = -100,							-- This is how far you can go into debt on MIL for actions that allow spending power you don't have.
@@ -1313,7 +1313,7 @@ NMilitary = {
 	MAX_MANPOWER = 10, 								-- years in mp pool
 	MIN_MONTHLY_MANPOWER = 0.2,						-- 100 men/month is minimum
 	MAX_SAILORS = 10, 								-- years in mp pool
-	MIN_MONTHLY_SAILORS = 5,						-- 5 sailors/month is minimum
+	MIN_MONTHLY_SAILORS = 10,						-- 5 sailors/month is minimum
 	SLAVE_RAIDS_SAILOR_FACTOR = 0.25,						--
 	SLAVE_RAIDS_DURATION = 3650,
 
@@ -1329,29 +1329,29 @@ NMilitary = {
 	INFANTRY_COST = 10.0, 							-- _MDEF_INFANTRY_COST = 10,
 	CAVALRY_COST = 25.0, 							-- _MDEF_CAVALRY_COST = 10,
 	ARTILLERY_COST = 30.0, 							-- _MDEF_ARTILLERY_COST = 10,
-	FORTRESS_COST = 0.5,							-- base fort cost
-	HEAVY_SHIP_COST = 50, 							-- _MDEF_HEAVY_SHIP_COST = 10,
+	FORTRESS_COST = 0.3,							-- base fort cost
+	HEAVY_SHIP_COST = 40, 							-- _MDEF_HEAVY_SHIP_COST = 10,
 	LIGHT_SHIP_COST = 20, 							-- _MDEF_LIGHT_SHIP_COST = 10,
 	GALLEY_COST = 10, 								-- _MDEF_GALLEY_COST = 10,
-	TRANSPORT_COST = 12,							-- _MDEF_TRANSPORT_COST = 10,
+	TRANSPORT_COST = 5,							-- _MDEF_TRANSPORT_COST = 10,
 	INFANTRY_TIME = 60, 							-- _MDEF_INFANTRY_TIME = 10,
 	CAVALRY_TIME = 90, 								-- _MDEF_CAVALRY_TIME = 10,
 	ARTILLERY_TIME = 120, 							-- _MDEF_ARTILLERY_TIME = 10,
 	HEAVY_SHIP_TIME = 730, 							-- _MDEF_HEAVY_SHIP_TIME = 10,
 	LIGHT_SHIP_TIME = 365, 							-- _MDEF_LIGHT_SHIP_TIME = 10,
 	GALLEY_TIME = 365, 								-- _MDEF_GALLEY_TIME = 10,
-	TRANSPORT_TIME = 365, 							-- _MDEF_TRANSPORT_TIME = 10,
+	TRANSPORT_TIME = 120, 							-- _MDEF_TRANSPORT_TIME = 10,
 	MONTHLY_REINFORCE = 0.1,						-- Amount of regiment strength reinforced each month.
 	MONTHLY_REPAIR = 0.1,							-- Ship repair speed.
 	EXTRA_LAND_REINFORCE_COST = 2.00,				-- extra cost for reinforcing land units (as a multiplier of maintenance).
-	MERCENARY_REINFORCE_COST_MULTIPLIER = -1.0,			-- Mercs no longer costs anything to reinfroce
+	MERCENARY_REINFORCE_COST_MULTIPLIER = 0.5,			-- Mercs no longer costs anything to reinfroce
 	MERCENARY_BASE_COST = 10.0,					-- base cost added for a mercenary regiment
 	TRADITION_GAIN_LAND = 20,						-- Tradition gain base value from land combat.
 	TRADITION_GAIN_NAVAL = 40,						-- Tradition gain base value from naval combat.
 	CONDOTTIERI_TRADITION_BONUS = 0.5,				-- This modifies army tradition gained from fighting with condottieris
 	FRONT_LINE_MODIFIER = 1.0, 						-- _MDEF_FRONT_LINE_MODIFIER_
 	BACK_LINE_MODIFIER = 0.5, 						-- _MDEF_BACK_LINE_MODIFIER_
-	BACK_LINE_REINFORCE_SPEED = 2, 					-- How many regiments can reinforce per day
+	BACK_LINE_REINFORCE_SPEED = 5, 					-- How many regiments can reinforce per day
 	BASE_COMBAT_WIDTH = 15.0,						-- _MDEF_BASE_COMBAT_WIDTH_
 	MAX_COMBAT_WIDTH = 40,
 	FORCE_MARCH_FACTOR = 0.5,						--
@@ -1365,11 +1365,11 @@ NMilitary = {
 	NAVAL_SUPPLY_RANGE = 150, 						-- Supply range for ships.
 	REBEL_TRADITION_GAIN = 0.5, 					-- _MDEF_REBEL_TRADITION_GAIN_; Factor of army/navy tradition gained from fighting rebels and pirates.
 	NOMAD_LOOT_TRADITION = 0.01,	 				-- _MDEF_NOMAD_LOOT_TRADITION_;Military tradition a horde gets from looting territory
-	NOMAD_PLAINS_SHOCK_BONUS = 0.25, 				--
-	NOMAD_NON_PLAINS_SHOCK_PENALTY = -0.25, 			--
+	NOMAD_PLAINS_SHOCK_BONUS = 0.15, 				--
+	NOMAD_NON_PLAINS_SHOCK_PENALTY = -0.15, 			--
 	SUPPLYLIMIT_BASE_MULTIPLIER = 6.0, 				--
 	WAR_LENGTH_DAMAGE_MODIFIER = 0.01,				-- How much (by percentage) the damage dealt will be increased each day of the combat
-	BACK_LINE_MORALE_DAMAGE_TAKEN_MODIFIER = 0.4,	-- Multiplier for morale damage taken by backrow
+	BACK_LINE_MORALE_DAMAGE_TAKEN_MODIFIER = 0.2,	-- Multiplier for morale damage taken by backrow
 	BACK_LINE_STRENGTH_DAMAGE_TAKEN_MODIFIER = 0.0,	-- Multiplier for strength damage taken by backrow
 	MORALE_RECOVERY_SPEED = 0.15,					-- How much (by percentage) of the maximum morale that the current morale will be recovered with at a time
 	MORALE_RECOVERY_SPEED_OWN_TERRITORY = 0.05,		-- How much the recovery speed for morale will be modified if unit is in controlled territory
@@ -1573,10 +1573,10 @@ NMilitary = {
 
 	MERCENARY_COMPANY_HIRING_COST_MONTHS = 48,		-- Initial hiring cost in months of maintenance
 	MERCENARY_COMPANY_STARTING_MORALE = 0.5,		-- Starting morale
-	MERCENARY_COMPANY_MIN_REGIMENTS = 4,			-- Minimum regiments
-	MERCENARY_COMPANY_MAX_REGIMENTS = 60,			-- Maximum regiments
-	MERCENARY_COMPANY_MANPOWER_PER_REGIMENT = 2.0,	-- Manpower reserve factor (multiplied by 1000 per regiment)
-	MERCENARY_COMPANY_MANPOWER_RECOVERY = 120,				-- How many months to recover mercenary manpower fully
+	MERCENARY_COMPANY_MIN_REGIMENTS = 6,			-- Minimum regiments
+	MERCENARY_COMPANY_MAX_REGIMENTS = 80,			-- Maximum regiments
+	MERCENARY_COMPANY_MANPOWER_PER_REGIMENT = 1.5,	-- Manpower reserve factor (multiplied by 1000 per regiment)
+	MERCENARY_COMPANY_MANPOWER_RECOVERY = 100,				-- How many months to recover mercenary manpower fully
 	MERCENARY_COMPANY_HIRED_MANPOWER_RECOVERY_MOD = 2.0,		-- How much to modify the length for manpower recovery if they are hired
 	MERCENARY_COMPANY_LOW_MANPOWER_THRESHOLD = 0.1,	-- Percentage of remaining manpower under which we warn the player
 	MERCENARY_TRADE_RANGE_MODIFIER = 1.0,			-- Only use half of trade range
