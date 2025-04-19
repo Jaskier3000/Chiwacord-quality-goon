@@ -3,7 +3,7 @@ emu_cavalry = {
     amount_of_hussars = 4
 }
 david_the_builder = {
-    development_cost = -0.7
+    development_cost = -0.5
 }
 judaism_resurgence = {
 	trade_goods_size_modifier = 0.6
@@ -19,5 +19,6 @@ qol_colonists = {
 }
 por_exploration = {
 	range = 0.5
+  colonist = 1
 	global_colonial_growth = 15
 }
