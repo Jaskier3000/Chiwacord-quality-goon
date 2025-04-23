@@ -1,0 +1,22 @@
+spriteTypes = {
+ spriteType = {
+  name = "GFX_great_project_necropolis_radimlja"
+  texturefile = "gfx//interface//great_projects//great_project_necropolis_radimlja.dds"
+  legacy_lazy_load = no
+ }
+ spriteType = {
+  name = "GFX_great_project_vranduk"
+  texturefile = "gfx//interface//great_projects//great_project_vranduk.dds"
+  legacy_lazy_load = no
+ }
+ spriteType = {
+  name = "GFX_great_project_ljubljana_castle"
+  texturefile = "gfx//interface//great_projects//great_project_ljubljana_castle.dds"
+  legacy_lazy_load = no
+ }
+ spriteType = {
+  name = "GFX_great_project_durres_amphitheatre"
+  texturefile = "gfx//interface//great_projects//great_project_durres_amphitheatre.dds"
+  legacy_lazy_load = no
+ }
+}

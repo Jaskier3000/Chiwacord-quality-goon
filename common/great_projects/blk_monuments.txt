@@ -1,0 +1,389 @@
+necropolis_radimlja = {
+ start = 1831
+ date = 1200.1.1 # 1150-1250, apparently. so i picked the middle
+ time = { months = 0 }
+ build_cost = 0
+ can_be_moved = no
+ starting_tier = 1
+ type = monument
+ can_use_modifiers_trigger = {
+		province_is_or_accepts_religion = {
+			religion = krstjani
+		}
+ }
+ can_upgrade_trigger = {
+		province_is_or_accepts_religion = {
+			religion = krstjani
+		}
+ }
+ build_trigger = {}
+ keep_trigger = {}
+ tier_0 = {
+  upgrade_time = { months = 0 }
+  cost_to_upgrade = { factor = 0 }
+  province_modifiers = {}
+ }
+ tier_1 = {
+  upgrade_time = { months = 60 }
+  cost_to_upgrade = { factor = 100 }
+  province_modifiers = {}
+  area_modifier = {
+   local_tax_modifier = 0.1
+  }
+ }
+ tier_2 = {
+  upgrade_time = { months = 90 }
+  cost_to_upgrade = { factor = 250 }
+  province_modifiers = {}
+  area_modifier = {
+   local_tax_modifier = 0.1
+  }
+  country_modifiers = {
+   church_power_modifier = 0.1
+  }
+  on_upgraded = {
+   add_base_tax = 1
+  }
+ }
+ tier_3 = {
+  upgrade_time = { months = 120 }
+  cost_to_upgrade = { factor = 750 }
+  province_modifiers = {}
+  area_modifier = {
+   local_tax_modifier = 0.1
+  }
+  country_modifiers = {
+   tolerance_own = 0.25
+   church_power_modifier = 0.1
+  }
+  on_upgraded = {
+   add_base_tax = 1
+  }
+ }
+}
+
+vranduk = {
+ start = 140
+ date = 1394.1.1 # "End of the 14th century". i just put it 50 yrs to 1444
+ time = { months = 0 }
+ build_cost = 0
+ can_be_moved = no
+ starting_tier = 1
+ type = monument
+ build_trigger = {
+ }
+ on_built = {
+ }
+ on_destroyed = {
+ }
+ can_use_modifiers_trigger = {
+ }
+ can_upgrade_trigger = {
+ }
+ keep_trigger = {
+ }
+ tier_0 = {
+  upgrade_time = { months = 0 }
+  cost_to_upgrade = { factor = 0 }
+  province_modifiers = {}
+ }
+ tier_1 = {
+  upgrade_time = { months = 60 }
+  cost_to_upgrade = { factor = 200 }
+  province_modifiers = {
+   local_defensiveness = 0.1
+  }
+  area_modifier = {}
+ }
+ tier_2 = {
+  upgrade_time = { months = 120 }
+  cost_to_upgrade = { factor = 500 }
+  province_modifiers = {
+   local_defensiveness = 0.1
+  }
+  area_modifier = {
+   local_defensiveness = 0.1
+   local_autonomy = -0.025
+  }
+  # only here so we can have conditional modifiers
+  country_modifiers = {
+   rival_border_fort_maintenance = -0.1
+  }
+  # ottomans historically turned it into a mosque fortress,
+  # so i'm giving muslims a bonus to conversion to represent that
+  conditional_modifier = {
+   trigger = {
+    province_is_or_accepts_religion_group = {
+     religion_group = muslim
+    }
+   }
+   modifier = {
+    global_heathen_missionary_strength = 0.002
+   }
+  }
+  # otherwise we can give some generic fort related bonuses for christians camping on the ottoman doorstep
+  # (army tradition from "maintaining forts" and prestige because "big fort cool")
+  conditional_modifier = {
+   trigger = {
+    province_is_or_accepts_religion_group = {
+     religion_group = christian
+    }
+   }
+   modifier = {
+    army_tradition = 0.1
+    prestige = 0.1
+   }
+  }
+  on_upgraded = {
+   if = {
+    limit = {
+     140 = {
+      has_fort_building_trigger = no
+     }
+    }
+    add_building_construction = {
+     building = fort_15th
+     speed = 0.1 # the castle setup finishes 3 months later (models supplying it and stuff)
+     cost = 0
+    }
+   }
+  }
+ }
+ tier_3 = {
+  upgrade_time = { months = 240 }
+  cost_to_upgrade = { factor = 1000 }
+  province_modifiers = {
+   local_defensiveness = 0.2
+   local_defender_dice_roll_bonus = 1
+  }
+  area_modifier = {
+   local_defensiveness = 0.2
+   local_autonomy = -0.05
+  }
+  country_modifiers = {
+   rival_border_fort_maintenance = -0.2
+  }
+  conditional_modifier = {
+   trigger = {
+    province_is_or_accepts_religion_group = {
+     religion_group = muslim
+    }
+   }
+   modifier = {
+    global_heathen_missionary_strength = 0.005
+   }
+  }
+  conditional_modifier = {
+   trigger = {
+    province_is_or_accepts_religion_group = {
+     religion_group = christian
+    }
+   }
+   modifier = {
+    army_tradition = 0.25
+    prestige = 0.25
+   }
+  }
+  on_upgraded = {
+   if = {
+    limit = {
+     140 = {
+      has_fort_building_trigger = no
+     }
+    }
+    add_building_construction = {
+     building = fort_15th
+     speed = 0.1 # the castle setup finishes 3 months later (models supplying it and stuff)
+     cost = 0
+    }
+   }
+  }
+ }
+}
+
+ljubljana_castle = {
+ start = 129
+ date = 1115.1.1 # started construction in the 11th century, sometime between 1112 and 1125
+ time = { months = 0 }
+ build_cost = 0
+ can_be_moved = no
+ starting_tier = 1
+ type = monument
+ keep_trigger = {}
+ build_trigger = {}
+ can_upgrade_trigger = {}
+ can_use_modifiers_trigger = {}
+ tier_0 = {
+  upgrade_time = { months = 0 }
+  cost_to_upgrade = { factor = 0 }
+  province_modifiers = {}
+ }
+ tier_1 = {
+  upgrade_time = { months = 60 }
+  cost_to_upgrade = { factor = 250 }
+  province_modifiers = {
+   local_defensiveness = 0.1
+   local_tax_modifier = 0.1
+  }
+  area_modifier = {}
+ }
+ tier_2 = {
+  upgrade_time = { months = 120 }
+  cost_to_upgrade = { factor = 1000 }
+  province_modifiers = {
+   local_defensiveness = 0.1
+   local_tax_modifier = 0.1
+   local_defender_dice_roll_bonus = 1
+  }
+  area_modifier = {
+   local_autonomy = -0.025
+  }
+  country_modifiers = {
+   prestige = 0.25
+  }
+  conditional_modifier = {
+   trigger = {
+    owner = { mission_completed = cli_renovate_ljubljana }
+   }
+   modifier = {
+    legitimacy = 0.25
+   }
+  }
+  conditional_modifier = {
+   trigger = {
+    owner = { mission_completed = cli_web_loyalty }
+   }
+   modifier = {
+    global_spy_defence = 0.15
+    spy_offence = 0.15
+   }
+ }
+ }
+ tier_3 = {
+  upgrade_time = { months = 240 }
+  cost_to_upgrade = { factor = 2000 }
+  province_modifiers = {
+   local_defensiveness = 0.2
+   local_tax_modifier = 0.2
+   local_defender_dice_roll_bonus = 1
+  }
+  area_modifier = {
+   local_autonomy = -0.05
+  }
+  country_modifiers = {
+   prestige = 0.5
+  }
+  conditional_modifier = {
+   trigger = {
+    owner = { mission_completed = cli_renovate_ljubljana }
+   }
+   modifier = {
+    legitimacy = 0.5
+   }
+  }
+  conditional_modifier = {
+   trigger = {
+    owner = { mission_completed = cli_web_loyalty }
+   }
+   modifier = {
+    global_spy_defence = 0.25
+    spy_offence = 0.25
+   }
+  }
+ }
+}
+
+durres_amphitheatre = {
+ start = 4174
+ date = 100.1.1 # 2nd century
+ time = { months = 0 }
+ build_cost = 0
+ can_be_moved = no
+ starting_tier = 0 # it's very old, and by the time it was pretty damaged
+ type = monument
+ keep_trigger = {}
+ build_trigger = {}
+ can_use_modifiers_trigger = {
+		OR = {
+   culture = albanian
+   hidden_trigger = {
+    culture = albanian_new
+   }
+   culture = greek
+   culture = roman
+  }
+		province_is_or_accepts_culture = yes
+ }
+ can_upgrade_trigger = {
+		OR = {
+   culture = albanian
+   hidden_trigger = {
+    culture = albanian_new
+   }
+   culture = greek
+   culture = roman
+  }
+		province_is_or_accepts_culture = yes
+ }
+ tier_0 = {
+  upgrade_time = { months = 0 }
+  cost_to_upgrade = { factor = 0 }
+  province_modifiers = {}
+ }
+ tier_1 = {
+  upgrade_time = { months = 60 }
+  cost_to_upgrade = { factor = 250 }
+  province_modifiers = {}
+  country_modifiers = {
+   prestige_from_land = 0.2
+   army_tradition_from_battle = 0.1
+  }
+  area_modifier = {
+   local_unrest = -1
+  }
+  on_upgraded = {
+   add_army_tradition_or_mil_power = { amount = 10 }
+   add_base_manpower = 1
+  }
+ }
+ tier_2 = {
+  upgrade_time = { months = 120 }
+  cost_to_upgrade = { factor = 750 }
+  province_modifiers = {}
+  area_modifier = {}
+  country_modifiers = {
+   prestige_from_land = 0.5
+   army_tradition_from_battle = 0.25
+   monthly_prussian_militarized_society_1 = 0.02
+   monthly_prussian_militarized_society_2 = 0.02
+   monthly_prussian_militarized_society_3 = 0.02
+  }
+  region_modifier = {
+   local_unrest = -1.5
+  }
+  on_upgraded = {
+   add_army_tradition_or_mil_power = { amount = 20 }
+   add_base_manpower = 1
+  }
+ }
+ tier_3 = {
+  upgrade_time = { months = 240 }
+  cost_to_upgrade = { factor = 1250 }
+  province_modifiers = {}
+  area_modifier = {}
+  country_modifiers = {
+   prestige_from_land = 1
+   army_tradition_from_battle = 0.5
+   monthly_prussian_militarized_society_1 = 0.05
+   monthly_prussian_militarized_society_2 = 0.05
+   monthly_prussian_militarized_society_3 = 0.05
+  }
+  region_modifier = {
+   local_unrest = -2
+  }
+  on_upgraded = {
+   add_army_tradition_or_mil_power = { amount = 30 }
+   add_base_manpower = 1
+  }
+ }
+}
