@@ -88,7 +88,7 @@ parliamentary_reform = {
 		}
 		has_parliament = yes
 		custom_attributes = {
-			disables_estate_nobles = yes
+		#	disables_estate_nobles = yes
 			blocked_call_diet = yes
 		}
 	}

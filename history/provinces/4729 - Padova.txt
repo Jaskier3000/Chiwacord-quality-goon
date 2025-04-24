@@ -3,8 +3,8 @@
 owner = VEN
 controller = VEN
 culture = venetian
-religion = catholic 
-hre = yes
+religion = catholic
+hre = yes 
 base_tax = 4
 base_production = 3
 trade_goods = paper
