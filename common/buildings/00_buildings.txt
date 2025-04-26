@@ -83,7 +83,7 @@ workshop = {
 	cost = 100
 	time = 12
 	modifier = {
-		local_production_efficiency = 0.5
+		local_production_efficiency = 0.4
 	}
 	on_built = {
 		add_development_from_building = {
@@ -113,7 +113,7 @@ temple = {
 	cost = 100
 	time = 12
 	modifier = {
-		local_tax_modifier = 0.4
+		local_tax_modifier = 0.5
 	}
 	on_built = {
 		on_built_tax_building_effect = yes
@@ -608,9 +608,10 @@ coastal_defence = {
 		has_port = yes
 	}
 	modifier = {
-		blockade_force_required = 0.5
+		blockade_force_required = 0.25
 		hostile_disembark_speed = 1.0
 		block_slave_raid = yes
+		hostile_fleet_attrition = 2
 	}
 
 	ai_will_do = {
@@ -626,10 +627,12 @@ courthouse = {
 	cost = 100
 	time = 12
 	modifier = {
-		local_state_maintenance_modifier = -0.25
+		local_state_maintenance_modifier = -0.2
 		local_autonomy = -0.1
 		local_governing_cost = -0.25
 		allowed_num_of_buildings = 1
+		local_tax_modifier = 0.05
+		local_manpower_modifier = 0.05
 	}
 	on_built = {
 		add_development_from_building = {
@@ -1081,7 +1084,7 @@ naval_battery = {
 		has_port = yes
 	}
 	modifier = {
-		blockade_force_required = 1.0
+		blockade_force_required = 0.5
 		hostile_disembark_speed = 2.0
 		hostile_fleet_attrition = 5
 		block_slave_raid = yes
@@ -1102,7 +1105,7 @@ cathedral = {
 	time = 12
 	modifier = {
 		local_missionary_strength = 0.03
-		local_tax_modifier = 0.6
+		local_tax_modifier = 1
 	}
 	on_built = {
 		on_built_tax_building_effect = yes
@@ -1341,6 +1344,7 @@ trade_depot = {
 
 	modifier = {
 		province_trade_power_modifier = 1
+		trade_value_modifier = 0.05
 	}
 
 	on_built = {
@@ -1709,6 +1713,7 @@ stock_exchange = {
 
 	modifier = {
 		province_trade_power_modifier = 1.25
+		trade_value_modifier = 0.1
 	}
 
 	on_built = {
@@ -1765,7 +1770,7 @@ counting_house = {
 
 	make_obsolete = workshop
 	modifier = {
-		local_production_efficiency = 1
+		local_production_efficiency = 0.8
 	}
 
 	on_built = {
@@ -1804,9 +1809,11 @@ town_hall = {
 	make_obsolete = courthouse
 
 	modifier = {
-		local_state_maintenance_modifier = -0.5
+		local_state_maintenance_modifier = -0.4
 		local_autonomy = -0.2
 		local_governing_cost = -0.5
+		local_manpower_modifier = 0.1
+		local_tax_modifier = 0.1
 		allowed_num_of_buildings = 1
 	}
 
@@ -2239,7 +2246,7 @@ manufactory = {
 	cost = 500
 	time = 60
 	modifier = {
-		trade_goods_size = 1.0
+		trade_goods_size = 0.8
 	}
 }
 
@@ -2616,6 +2623,7 @@ ramparts = {
 		local_hostile_attrition = 1
 		local_defensiveness = 0.15
 		local_defender_dice_roll_bonus = 1
+		local_assault_fort_ability = -0.2
 	}
 	onmap = no
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
@@ -2760,12 +2768,12 @@ impressment_offices = {
 	}
 
 	modifier = {
-		local_sailors = 250
+		local_sailors = 400
 		ship_recruit_speed = -0.1
 		local_ship_cost = -0.05
 	}
 	bonus_modifier = {
-		local_sailors = 250
+		local_sailors = 400
 		ship_recruit_speed = -0.1
 		local_ship_cost = -0.05
 	}
