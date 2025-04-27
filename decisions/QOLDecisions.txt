@@ -368,15 +368,14 @@ add_all_provinces_to_seats = {
   		}
   		ai_will_do = {factor = 0}
   	}
-}
+
 
 qol_eur_colonists = {
-  color = { 66 245 242 }
 
   potential = {
-    ai =  no
-    adm_tech = 5
-    dip_tech = 5
+  ai =  no
+  adm_tech = 5
+  dip_tech = 5
     capital_scope = {
       OR = {
         continent = north_america
@@ -384,7 +383,7 @@ qol_eur_colonists = {
         continent = south_america
       }
     }
-    NOT = { has_country_modifier = qolu_2colonists }
+    NOT = { has_country_modifier = qol_colonists }
     NOT = { tag = OIR }
     NOT = { tag = MJZ }
     NOT = { tag = MCH }
@@ -392,7 +391,7 @@ qol_eur_colonists = {
   }
 
   allow = {
-    adm_tech = 5
+    dip_tech = 5
 
     dip_power = 50
   }
@@ -408,16 +407,14 @@ qol_eur_colonists = {
 }
 
 qol_afr_colonists = {
-  color = { 66 245 242 }
 
   potential = {
-    ai =  no
-    adm_tech = 7
-
+  ai =  no
+  dip_tech = 7
     capital_scope = {
       continent = africa
     }
-    NOT = { has_country_modifier = qolu_2colonists }
+    NOT = { has_country_modifier = qol_colonists }
     NOT = { tag = OIR }
     NOT = { tag = MJZ }
     NOT = { tag = MCH }
@@ -425,7 +422,7 @@ qol_afr_colonists = {
   }
 
   allow = {
-    adm_tech = 7
+    dip_tech = 7
 
     dip_power = 50
   }
@@ -441,16 +438,14 @@ qol_afr_colonists = {
 }
 
 qol_asia_colonists = {
-  color = { 66 245 242 }
 
   potential = {
-    ai =  no
-    adm_tech = 7
-
+  ai =  no
+  dip_tech = 7
     capital_scope = {
       continent = asia
     }
-    NOT = { has_country_modifier = qolu_2colonists }
+    NOT = { has_country_modifier = qol_colonists }
     NOT = { tag = OIR }
     NOT = { tag = MJZ }
     NOT = { tag = MCH }
@@ -458,7 +453,7 @@ qol_asia_colonists = {
   }
 
   allow = {
-    adm_tech = 7
+    dip_tech = 7
 
     dip_power = 50
   }
@@ -474,7 +469,6 @@ qol_asia_colonists = {
 }
 
 qol_por_day1colonist = {
-  color = { 66 245 242 }
 
   potential = {
     tag = POR
@@ -492,4 +486,5 @@ qol_por_day1colonist = {
     }
     create_explorer = { tradition = 10 }
   }
+}
 }

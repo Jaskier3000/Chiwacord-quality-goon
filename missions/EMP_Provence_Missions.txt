@@ -792,6 +792,11 @@ provence_missions_5 = {
 provence_missions_6 = { slot = 2
 	generic = no
 	ai = no
+	
+	potential = {
+		tag = PRO
+		NOT = { map_setup = map_setup_random }
+	}
 	has_country_shield = yes
 	
 	get_wife = {

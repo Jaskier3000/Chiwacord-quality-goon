@@ -387,7 +387,7 @@ NDiplomacy = {
 	GRANT_ELECTORATE_INFLUENCE = 0,					-- The amount of AI Grant Electorate gives.
 	GRANT_FREECITY_INFLUENCE = 0,					-- The amount of IA Grant Free Gity gives.
 	REMOVE_FREECITY_INFLUENCE_COST = 5,				-- The amount of IA Grant Free Gity costs.
-	IMPERIAL_CITY_IA = 0.075,						-- Monthly per imperial free city
+	IMPERIAL_CITY_IA = 0.01,						-- Monthly per imperial free city
 
 	AGITATE_FOR_LIBERTY_DESIRE = 25,				-- Liberty Desire gained due to ongoing agitation.
 	AGITATE_FOR_LIBERTY_RATE = 1,					-- Monthly rate at which Liberty Desire rises towards the maximum during agitation, or otherwise falls towards zero.
@@ -1296,7 +1296,7 @@ NMilitary = {
 	UNLOAD_COST_ENEMY = 36,							-- cost to hostile.
 	LEADER_MAINTENANCE_COST = 1,					-- how much mil power each leader costs.
 	GARRISON_SIZE = 2000, 							-- GARRISON_SIZE
-	SIEGE_FORCE_NEEDED_MULTIPLIER = 1.5,				-- x times garrison to be able to siege.
+	SIEGE_FORCE_NEEDED_MULTIPLIER = 1,				-- x times garrison to be able to siege.
 	MAX_BREACH = 3,
 	SIEGE_GARRISON_SURRENDER = 100,					-- A siege ends when there is less than 100 defenders left.
 	ASSAULT_WIDTH_LIMIT = 5,						-- how many times the garrison size that can effectively assault at the same time.
