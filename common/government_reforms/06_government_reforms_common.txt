@@ -4658,6 +4658,8 @@ ayyubid_high_command = {
 		max_general_shock = 2
 		general_cost = -0.1
 		free_land_leader_pool = 2
+		cav_to_inf_ratio = 0.10
+		cavalry_cost = -0.10
 	}
 	custom_attributes = {
 		army_tradition_for_generals = yes

@@ -1378,19 +1378,20 @@ estate_burghers_control_over_monetary_policy = {
 		has_dlc = "Emperor"
 	}
 	penalties = {
-		all_power_cost = 0.05
+		#all_power_cost = 0.05
 	}
 	benefits = {
-		inflation_reduction = 0.15
-		interest = -0.5
+		inflation_reduction = 0.05
+		interest = -0.25
 		production_efficiency = 0.05
+		global_tax_modifier = -0.1
 	}
 	conditional_modifier = {
 		trigger = {
 			has_country_flag = fra_enable_italian_bookkeeping_privilege_flag
 		}
 		modifier = {
-			all_power_cost = -0.05
+			all_power_cost = -0.025
 			burghers_influence_modifier = 0.025
 		}
 	}

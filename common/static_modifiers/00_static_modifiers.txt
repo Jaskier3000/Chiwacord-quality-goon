@@ -2216,6 +2216,7 @@ over_governing_capacity_modifier = {
 	stability_cost_modifier = 1.0
 	ae_impact = 0.5
 	improve_relation_modifier = -0.5
+	core_creation = 0.2
 	advisor_cost = 1.0
 	monthly_militarized_society = -1
 	monthly_prussian_militarized_society_1 = -1
@@ -2224,6 +2225,9 @@ over_governing_capacity_modifier = {
 	administrative_efficiency = -0.5
 	monthly_ottoman_decadence = 2
 	monthly_authority_power = 0.5
+	global_tax_modifier = -0.5
+	production_efficiency = -0.5
+	global_trade_goods_size_modifier = -0.5
 }
 
 #Scales with used capacity, being at full capacity means 100% of the modifier
@@ -2235,7 +2239,7 @@ development_cost = -0.1
 }
 
 lost_hegemony = {
-	all_power_cost	= 0.05
+	prestige = -5
 }
 
 at_peace_revolutionary = { # Applied if at peace while reactionaries are bordering you
