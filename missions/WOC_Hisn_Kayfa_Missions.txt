@@ -11,7 +11,7 @@ hsn_first_branch = {
 		has_dlc = "Winds of Change"
 	}
 	has_country_shield = yes
-	
+
 	hsn_political_security = {
 		icon = mission_reliable_allies
 		required_missions = {  }
@@ -34,7 +34,7 @@ hsn_first_branch = {
 			}
 			add_country_modifier = {
 				name = hsn_political_security
-				duration = 7300 
+				duration = 7300
 			}
 			if = {
 				limit = {
@@ -146,16 +146,16 @@ hsn_first_branch = {
 			factor = 250
 		}
 	}
-	
+
 	hsn_last_bastion = {
 		icon = mission_tear_down_spanish_strongholds
 		required_missions = {  }
 		position = 2
-		
+
 		provinces_to_highlight = {
 			province_id = 4295
 		}
-		
+
 		trigger = {
 			OR = {
 				4295 = {
@@ -167,7 +167,7 @@ hsn_first_branch = {
 				advisor = fortification_expert
 			}
 		}
-		
+
 		effect = {
 			add_yearly_manpower = 1.5
 			4295 = {
@@ -178,12 +178,12 @@ hsn_first_branch = {
 			}
 		}
 	}
-	
+
 	hsn_saladins_legacy = {
 		icon = mission_saladins_legacy
 		required_missions = { hsn_last_bastion }
 		position = 3
-		
+
 		provinces_to_highlight = {
 			owned_by = ROOT
 			NOT = {
@@ -199,25 +199,25 @@ hsn_first_branch = {
 				value = 10
 			}
 		}
-		
+
 		effect = {
 			country_event = { id = flavor_hsn.5 }
 			custom_tooltip = hsn_saladins_legacy_event_insight_tt
 		}
 	}
-	
+
 	hsn_eagle_flies_alone = {
 		icon = encroach_on_the_germans
 		required_missions = { hsn_saladins_legacy }
 		position = 4
-		
+
 		provinces_to_highlight = {
 			owner = {
 				is_rival = ROOT
 				army_size = ROOT
 			}
 		}
-		
+
 		trigger = {
 			army_size = 100
 			OR = {
@@ -241,7 +241,7 @@ hsn_first_branch = {
 				}
 			}
 		}
-		
+
 		effect = {
 			create_general = { tradition = 100 }
 			add_country_modifier = {
@@ -286,17 +286,17 @@ hsn_first_branch = {
 			}
 		}
 	}
-	
+
 	hsn_fate_of_anatolia = {
 		icon = anatolian_frontier
 		required_missions = { hsn_slay_white_sheep }
 		position = 5
-		
+
 		provinces_to_highlight = {
 			region = anatolia_region
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
-		
+
 		trigger = {
 			OR = {
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -317,7 +317,7 @@ hsn_first_branch = {
 				}
 			}
 		}
-		
+
 		effect = {
 			hidden_effect = {
 				if = {
@@ -497,7 +497,7 @@ hsn_first_branch = {
 			}
 		}
 	}
-	
+
 }
 
 hsn_first_branch_branching_locked = {
@@ -519,19 +519,19 @@ hsn_first_branch_branching_locked = {
 		has_dlc = "Winds of Change"
 	}
 	has_country_shield = yes
-	
+
 	hsn_branching_first = {
 		icon = mission_unknown_mission
 		required_missions = { hsn_fate_of_anatolia }
 		position = 6
 
 		trigger = { custom_trigger_tooltip = { tooltip = hsn_this_is_a_branching_mission always = no } }
-		
+
 		effect = {
 			custom_tooltip = hsn_this_is_a_branching_mission
 		}
 	}
-	
+
 }
 
 hsn_first_branch_branching_unlocked_alliance = {
@@ -551,12 +551,12 @@ hsn_first_branch_branching_unlocked_alliance = {
 		has_dlc = "Winds of Change"
 	}
 	has_country_shield = yes
-	
+
 	hsn_a_sublime_alliance = {
 		icon = mission_ottoman_diplomacy
 		required_missions = { hsn_fate_of_anatolia }
 		position = 6
-		
+
 		provinces_to_highlight = {
 			owner = {
 				alliance_with = ROOT
@@ -569,7 +569,7 @@ hsn_first_branch_branching_unlocked_alliance = {
 				}
 			}
 		}
-		
+
 		trigger = {
 			not_in_mission_preview_mode = { key = HSN }
 			any_ally = {
@@ -592,7 +592,7 @@ hsn_first_branch_branching_unlocked_alliance = {
 				}
 			}
 		}
-		
+
 		effect = {
 			random_ally = {
 				limit = {
@@ -721,7 +721,7 @@ hsn_first_branch_branching_unlocked_alliance = {
 			}
 		}
 	}
-	
+
 }
 
 hsn_first_branch_branching_unlocked_conquest = {
@@ -741,17 +741,17 @@ hsn_first_branch_branching_unlocked_conquest = {
 		has_dlc = "Winds of Change"
 	}
 	has_country_shield = yes
-	
+
 	hsn_overthrow_the_ottomans = {
 		icon = geo_break_the_crescent_2
 		required_missions = { hsn_fate_of_anatolia }
 		position = 6
-		
+
 		provinces_to_highlight = {
 			region = anatolia_region
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
-		
+
 		trigger = {
 			not_in_mission_preview_mode = { key = HSN }
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -759,7 +759,7 @@ hsn_first_branch_branching_unlocked_conquest = {
 				value = 40
 			}
 		}
-		
+
 		effect = {
 			add_power_projection = {
 				type = mission_rewards_power_projection
@@ -778,7 +778,7 @@ hsn_first_branch_branching_unlocked_conquest = {
 			}
 		}
 	}
-	
+
 }
 
 hsn_first_branch_2 = {
@@ -794,35 +794,35 @@ hsn_first_branch_2 = {
 		has_dlc = "Winds of Change"
 	}
 	has_country_shield = yes
-	
+
 	hsn_recover_egypt = {
 		icon = mission_egyptian_mamluk_soldier
 		required_missions = { hsn_ayyubid_restoration }
 		position = 8
-		
+
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				region = egypt_region 
+				region = egypt_region
 				value = 15
 			}
 		}
-		
+
 		provinces_to_highlight = {
 			region = egypt_region
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
-		
+
 		effect = {
 			country_event = { id = flavor_hsn.2 }
 			custom_tooltip = hsn_fate_mamluks_insight_tt
 		}
 	}
-	
+
 	hsn_ayyubid_caliphate = {
 		icon = mission_fatimid_caliphate
 		required_missions = { hsn_recover_egypt }
 		position = 10
-		
+
 		provinces_to_highlight = {
 			OR = {
 				province_id = 361
@@ -836,7 +836,7 @@ hsn_first_branch_2 = {
 				owned_by = ROOT
 			}
 		}
-		
+
 		trigger = {
 			prestige = 90
 			legitimacy = 90
@@ -853,7 +853,7 @@ hsn_first_branch_2 = {
 			owns = 410
 			owns = 382
 		}
-		
+
 		effect = {
 			set_government_rank = 3
 			custom_tooltip = hsn_empty
@@ -896,26 +896,26 @@ hsn_first_branch_2 = {
 			}
 		}
 	}
-	
+
 	hsn_dar_al_islam = {
 		icon = per_unify_islam
 		required_missions = { hsn_ayyubid_caliphate }
 		position = 11
-		
+
 		provinces_to_highlight = {
 			religion_group = muslim
 			NOT = {
 				owned_by = ROOT
 			}
 		}
-		
+
 		trigger = {
 			development_in_provinces = {
 				value = 1000
 				religion_group = muslim
 			}
 		}
-		
+
 		effect = {
 			custom_tooltip = hsn_manpower_islam_tt
 			add_country_modifier = {
@@ -1009,12 +1009,12 @@ hsn_second_branch = {
 			}
 		}
 	}
-	
+
 	hsn_slay_white_sheep = {
 		icon = qara_qoyunlu_dismantle_ak_qoyunlu
 		required_missions = { hsn_expand_the_domain }
 		position = 4
-		
+
 		provinces_to_highlight = {
 			OR = {
 				province_id = 407
@@ -1027,7 +1027,7 @@ hsn_second_branch = {
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
-		
+
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
@@ -1042,7 +1042,7 @@ hsn_second_branch = {
 				value = 4
 			}
 		}
-		
+
 		effect = {
 			add_war_exhaustion = -3
 			define_advisor = {
@@ -1104,12 +1104,12 @@ hsn_second_branch = {
 			}
 		}
 	}
-	
+
 	hsn_turn_against_mamluks = {
 		icon = mission_break_the_mamluks
 		required_missions = { hsn_slay_white_sheep }
 		position = 6
-		
+
 		provinces_to_highlight = {
 			OR = {
 				area = aleppo_area
@@ -1118,7 +1118,7 @@ hsn_second_branch = {
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
-		
+
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
@@ -1154,12 +1154,12 @@ hsn_second_branch = {
 			}
 		}
 	}
-	
+
 	hsn_ayyubid_restoration = {
 		icon = mission_ayyubid_restoration
 		required_missions = { hsn_turn_against_mamluks }
 		position = 7
-		
+
 		provinces_to_highlight = {
 			OR = {
 				area = palestine_area
@@ -1167,7 +1167,7 @@ hsn_second_branch = {
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
-		
+
 		trigger = {
 			palestine_area = {
 				type = all
@@ -1178,7 +1178,7 @@ hsn_second_branch = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
-		
+
 		effect = {
 			country_event = { id = flavor_hsn.1 }
 			custom_tooltip = hsn_empty
@@ -1220,17 +1220,17 @@ hsn_second_branch = {
 			}
 		}
 	}
-	
+
 	hsn_crusaders = {
 		icon = kingdom_of_cyprus
 		required_missions = { hsn_ayyubid_restoration }
 		position = 8
-		
+
 		provinces_to_highlight = {
 			province_id = 321
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
-		
+
 		trigger = {
 			321 = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1308,7 +1308,7 @@ hsn_second_branch = {
 			}
 		}
 	}
-	
+
 	hsn_alexandria = {
 		icon = mission_conquer_alexandria
 		required_missions = { hsn_recover_egypt }
@@ -1381,12 +1381,12 @@ hsn_second_branch = {
 			}
 		}
 	}
-	
+
 	hsn_granary = {
 		icon = mission_consume_the_baghels
 		required_missions = { hsn_alexandria }
 		position = 10
-		
+
 		provinces_to_highlight = {
 			region = egypt_region
 			owned_by = ROOT
@@ -1404,7 +1404,7 @@ hsn_second_branch = {
 				}
 			}
 		}
-		
+
 		trigger = {
 			calc_true_if = {
 				all_owned_province = {
@@ -1420,7 +1420,7 @@ hsn_second_branch = {
 				amount = 6
 			}
 		}
-		
+
 		effect = {
 			custom_tooltip = hsn_granary_mediterranean
 			tooltip = {
@@ -1493,7 +1493,7 @@ hsn_second_branch = {
 			}
 		}
 	}
-	
+
 }
 
 hsn_third_branch = {
@@ -1509,17 +1509,17 @@ hsn_third_branch = {
 		has_dlc = "Winds of Change"
 	}
 	has_country_shield = yes
-	
+
 	hsn_buildforces = {
 		icon = mission_reconquer_ceuta
 		required_missions = { }
 		position = 1
-		
+
 		trigger = {
 			army_size_percentage = 1
 			manpower_percentage = 0.8
 		}
-		
+
 		effect = {
 			create_general = { tradition = 40 }
 			add_country_modifier = {
@@ -1544,12 +1544,12 @@ hsn_third_branch = {
 			factor = 500
 		}
 	}
-	
+
 	hsn_fertile_crescent = {
 		icon = mission_coromandel_trade
 		required_missions = { hsn_recover_baghdad }
 		position = 4
-		
+
 		provinces_to_highlight = {
 			owned_by = ROOT
 			OR = {
@@ -1565,7 +1565,7 @@ hsn_third_branch = {
 				}
 			}
 		}
-		
+
 		trigger = {
 			num_of_owned_provinces_with = {
 				has_production_building_trigger = yes
@@ -1577,7 +1577,7 @@ hsn_third_branch = {
 				value = 5
 			}
 		}
-		
+
 		effect = {
 			iraq_arabi_area = {
 				limit = { owned_by = ROOT }
@@ -1619,26 +1619,26 @@ hsn_third_branch = {
 			}
 		}
 	}
-	
+
 	hsn_eastern_frontier = {
 		icon = mission_the_caucasus_rus
 		required_missions = { hsn_slay_white_sheep }
 		position = 5
-		
+
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				region = caucasia_region
 				value = 6
 			}
 		}
-		
+
 		provinces_to_highlight = {
 			region = caucasia_region
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
-		
+
 		effect = {
 			add_mil_power = 100
 			caucasia_region = {
@@ -1670,7 +1670,7 @@ hsn_third_branch = {
 			}
 		}
 	}
-	
+
 	hsn_sultan_shah = {
 		icon = mam_persia
 		required_missions = { hsn_conquer_basra }
@@ -1758,11 +1758,10 @@ hsn_third_branch = {
 					any_ally = {
 						capital_scope = {
 							OR = {
-								region = persia_region 
+								region = persia_region
 								region = khorasan_region
 							}
 						}
-						religion_group = muslim
 						custom_trigger_tooltip = {
 							tooltip = hsn_ally_persia
 							num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -1822,7 +1821,6 @@ hsn_third_branch = {
 							capital_scope = {
 								region = persia_region
 							}
-							religion_group = muslim
 							custom_trigger_tooltip = {
 								tooltip = hsn_ally_persia
 								num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -1846,7 +1844,7 @@ hsn_third_branch = {
 		}
 	}
 }
-	
+
 hsn_third_branch_branching_locked = {
 	slot = 3
 	generic = no
@@ -1866,7 +1864,7 @@ hsn_third_branch_branching_locked = {
 		has_dlc = "Winds of Change"
 	}
 	has_country_shield = yes
-	
+
 	hsn_branching_second = {
 		icon = mission_unknown_mission
 		required_missions = { hsn_sultan_shah }
@@ -1874,13 +1872,13 @@ hsn_third_branch_branching_locked = {
 		provinces_to_highlight = {
 		}
 		trigger = {
-			custom_trigger_tooltip = { tooltip = hsn_this_is_a_branching_mission2 always = no } 
+			custom_trigger_tooltip = { tooltip = hsn_this_is_a_branching_mission2 always = no }
 		}
 		effect = {
 			custom_tooltip = hsn_this_is_a_branching_mission2
 		}
 	}
-	
+
 }
 
 hsn_third_branch_branching_unlocked_alliance = {
@@ -1900,12 +1898,12 @@ hsn_third_branch_branching_unlocked_alliance = {
 		has_dlc = "Winds of Change"
 	}
 	has_country_shield = yes
-	
+
 	hsn_befriend_the_shah = {
 		icon = per_enlightened_rule
 		required_missions = { hsn_sultan_shah }
 		position = 7
-		
+
 		provinces_to_highlight = {
 			owner = {
 				alliance_with = ROOT
@@ -1914,7 +1912,7 @@ hsn_third_branch_branching_unlocked_alliance = {
 				}
 			}
 		}
-		
+
 		trigger = {
 			not_in_mission_preview_mode = { key = HSN2 }
 			any_ally = {
@@ -1934,7 +1932,7 @@ hsn_third_branch_branching_unlocked_alliance = {
 				}
 			}
 		}
-		
+
 		effect = {
 			unlock_decision = {
 				type = grand_vizier_selection
@@ -1951,7 +1949,6 @@ hsn_third_branch_branching_unlocked_alliance = {
 							capital_scope = {
 								region = persia_region
 							}
-							religion_group = muslim
 							has_opinion = {
 								who = ROOT
 								value = 190
@@ -1972,7 +1969,6 @@ hsn_third_branch_branching_unlocked_alliance = {
 							capital_scope = {
 								region = persia_region
 							}
-							religion_group = muslim
 							has_opinion = {
 								who = ROOT
 								value = 190
@@ -1992,7 +1988,6 @@ hsn_third_branch_branching_unlocked_alliance = {
 						capital_scope = {
 							region = persia_region
 						}
-						religion_group = muslim
 						has_opinion = {
 							who = ROOT
 							value = 190
@@ -2035,17 +2030,17 @@ hsn_third_branch_branching_unlocked_conquest = {
 		has_dlc = "Winds of Change"
 	}
 	has_country_shield = yes
-	
+
 	hsn_subjugate_eranshahr = {
 		icon = per_tab_ziyarids_successor
 		required_missions = { hsn_sultan_shah }
 		position = 7
-		
+
 		provinces_to_highlight = {
 			region = persia_region
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
-		
+
 		trigger = {
 			not_in_mission_preview_mode = { key = HSN2 }
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -2053,7 +2048,7 @@ hsn_third_branch_branching_unlocked_conquest = {
 				value = 45
 			}
 		}
-		
+
 		effect = {
 			add_years_of_owned_provinces_production_income = {
 				years = 5
@@ -2096,12 +2091,12 @@ hsn_third_branch_2 = {
 		has_dlc = "Winds of Change"
 	}
 	has_country_shield = yes
-	
+
 	hsn_custodian = {
 		icon = mission_into_arabia
 		required_missions = { hsn_ayyubid_restoration }
 		position = 8
-		
+
 		provinces_to_highlight = {
 			OR = {
 				area = tabuk_area
@@ -2110,7 +2105,7 @@ hsn_third_branch_2 = {
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
-		
+
 		trigger = {
 			tabuk_area = {
 				type = all
@@ -2125,7 +2120,7 @@ hsn_third_branch_2 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
-		
+
 		effect = {
 			if = {
 				limit = {
@@ -2134,7 +2129,7 @@ hsn_third_branch_2 = {
 				custom_tooltip = hsn_upgrade_kaaba_tt
 			}
 			else = {
-				add_country_modifier = { 
+				add_country_modifier = {
 					name = hsn_protector_of_pilgrims
 					duration = -1
 				}
@@ -2196,19 +2191,19 @@ hsn_third_branch_2 = {
 			}
 		}
 	}
-	
+
 	hsn_red_sea = {
 		icon = mission_arabian_ports
 		required_missions = { hsn_alexandria hsn_aden }
 		position = 10
-		
+
 		provinces_to_highlight = {
 			OR = {
 				province_id = 4346
 				province_id = 358
 			}
 		}
-		
+
 		trigger = {
 			4346 = {
 				trade_share = {
@@ -2223,7 +2218,7 @@ hsn_third_branch_2 = {
 				}
 			}
 		}
-		
+
 		effect = {
 			if = {
 				limit = {
@@ -2231,7 +2226,7 @@ hsn_third_branch_2 = {
 				}
 				custom_tooltip = hsn_upgrade_propagate_religion
 				set_country_flag = 40_trade_power_for_propogate_religion
-			}	
+			}
 			else = {
 				add_country_modifier = {
 					name = "hsn_trading_network"
@@ -2318,40 +2313,40 @@ hsn_third_branch_2 = {
 			}
 		}
 	}
-	
+
 	hsn_suez_canal = {
 		icon = mam_highway_empire
 		required_missions = { hsn_red_sea hsn_granary }
 		position = 10
-		
+
 		provinces_to_highlight = {
 			OR = {
-				province_id = 4316 
+				province_id = 4316
 				province_id = 2315
 			}
 		}
-		
+
 		trigger = {
 			4316 = {
 				owned_by = ROOT
 				OR = {
 					num_of_times_improved = 10
-					has_great_project = { 
-						type = suez_canal 
-						tier = 3 
+					has_great_project = {
+						type = suez_canal
+						tier = 3
 					}
 				}
 			}
-			2315 = { owned_by = ROOT }		
+			2315 = { owned_by = ROOT }
 		}
 		effect = {
 			if = {
-				limit = { 
+				limit = {
 					4316 = {
 						NOT = {
-							has_great_project = { 
-								type = suez_canal 
-								tier = 3 
+							has_great_project = {
+								type = suez_canal
+								tier = 3
 							}
 						}
 					}
@@ -2387,7 +2382,7 @@ hsn_third_branch_2 = {
 			}
 		}
 	}
-	
+
 }
 
 hsn_fourth_branch = {
@@ -2403,24 +2398,24 @@ hsn_fourth_branch = {
 		has_dlc = "Winds of Change"
 	}
 	has_country_shield = yes
-	
+
 	hsn_recover_baghdad = {
 	    icon = mission_into_persia_1
 		required_missions = { hsn_expand_the_domain }
 		position = 3
-		
+
 		provinces_to_highlight = {
 			area = iraq_arabi_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
-		
+
 		trigger = {
 			iraq_arabi_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
-		
+
 		effect = {
 			add_adm_power = 100
 			410 = {
@@ -2452,12 +2447,12 @@ hsn_fourth_branch = {
 			}
 		}
 	}
-	
+
 	hsn_conquer_basra = {
 		icon = mission_dominate_trade_in_bengal
 		required_missions = { hsn_recover_baghdad }
 		position = 5
-		
+
 		provinces_to_highlight = {
 			OR = {
 				area = basra_area
@@ -2465,7 +2460,7 @@ hsn_fourth_branch = {
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
-		
+
 		trigger = {
 			408 = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -2506,12 +2501,12 @@ hsn_fourth_branch = {
 			}
 		}
 	}
-	
+
 	hsn_consolidate_coastline = {
 		icon = mission_dharma_mission_arabian_trade
 		required_missions = { hsn_conquer_basra }
 		position = 7
-		
+
 		provinces_to_highlight = {
 			OR = {
 				area = bahrain_area
@@ -2519,7 +2514,7 @@ hsn_fourth_branch = {
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
-		
+
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
@@ -2581,12 +2576,12 @@ hsn_fourth_branch = {
 			}
 		}
 	}
-	
+
 	hsn_monopolize_gulf_trade = {
 		icon = qara_qoyunlu_dominate_the_gulf
 		required_missions = { hsn_consolidate_coastline }
 		position = 8
-		
+
 		provinces_to_highlight = {
 			OR = {
 				AND = {
@@ -2648,7 +2643,7 @@ hsn_fourth_branch = {
 				}
 			}
 		}
-		
+
 		trigger = {
 			owns = 2999
 			OR = {
@@ -2683,7 +2678,7 @@ hsn_fourth_branch = {
 			else = {
 				num_of_owned_provinces_with = {
 					value = 20
-					has_trade_building_trigger = yes 
+					has_trade_building_trigger = yes
 				}
 			}
 		}
@@ -2717,12 +2712,12 @@ hsn_fourth_branch = {
 			}
 		}
 	}
-	
+
 	hsn_aden = {
 		icon = mission_african_trade_post
 		required_missions = { hsn_custodian }
 		position = 9
-		
+
 		provinces_to_highlight = {
 			OR = {
 				area = tihama_al_yemen_area
@@ -2732,7 +2727,7 @@ hsn_fourth_branch = {
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
-		
+
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
@@ -2744,7 +2739,7 @@ hsn_fourth_branch = {
 				value = 10
 			}
 		}
-		
+
 		effect = {
 			add_years_of_owned_provinces_production_income = {
 				years = 10
@@ -2762,7 +2757,7 @@ hsn_fourth_branch = {
 			}
 		}
 	}
-	
+
 }
 
 hsn_fifth_branch = {
@@ -2778,12 +2773,12 @@ hsn_fifth_branch = {
 		has_dlc = "Winds of Change"
 	}
 	has_country_shield = yes
-	
+
 	hsn_appease_ulema = {
 		icon = mission_restore_caliphate_of_cordoba
 		required_missions = { }
 		position = 1
-		
+
 		trigger = {
 			if = {
 				limit = {
@@ -2815,10 +2810,10 @@ hsn_fifth_branch = {
 				value = 5
 			}
 		}
-		
+
 		effect = {
 			if = {
-				limit = { 
+				limit = {
 					has_dlc = "Cradle of Civilization"
 				}
 				if = {
@@ -2846,24 +2841,24 @@ hsn_fifth_branch = {
 			factor = 500
 		}
 	}
-	
+
 	hsn_build_mosques = {
 		icon = mission_conquer_gujarat_bah
 		required_missions = { hsn_appease_ulema }
 		position = 2
-		
+
 		provinces_to_highlight = {
 			owned_by = ROOT
 			NOT = { has_tax_building_trigger = yes }
 		}
-		
+
 		trigger = {
 			num_of_owned_provinces_with = {
 				has_tax_building_trigger = yes
 				value = 5
 			}
 		}
-		
+
 		effect = {
 			add_country_modifier = {
 				name = "hsn_ayyubid_architecture"
@@ -2915,16 +2910,16 @@ hsn_fifth_branch = {
 			}
 		}
 	}
-	
+
 	hsn_city_of_peace = {
 	    icon = mission_mustansiriya_madrasah
 		required_missions = { hsn_recover_baghdad hsn_build_mosques }
 		position = 4
-		
+
 		provinces_to_highlight = {
 			province_id = 410
 		}
-		
+
 		trigger = {
 			owns = 410
 			410 = {
@@ -2939,11 +2934,11 @@ hsn_fifth_branch = {
 			410 = {
 				has_production_building_trigger = yes
 			}
-			410 = { 
+			410 = {
 				is_state = yes
 			}
 		}
-		
+
 		effect = {
 			410 = {
 				upgrade_tax_building = yes
@@ -3021,16 +3016,16 @@ hsn_fifth_branch = {
 			}
 		}
 	}
-	
+
 	hsn_house_wisdom = {
 	    icon = mission_quran
 		required_missions = { hsn_city_of_peace }
 		position = 5
-		
+
 		provinces_to_highlight = {
 			province_id = 410
 		}
-		
+
 		trigger = {
 			410 = {
 				development = 40
@@ -3044,7 +3039,7 @@ hsn_fifth_branch = {
 			has_dip_advisor_3 = yes
 			has_mil_advisor_3 = yes
 		}
-		
+
 		effect = {
 			if = {
 				limit = {
@@ -3113,24 +3108,24 @@ hsn_fifth_branch = {
 			}
 		}
 	}
-	
+
 	hsn_madrasas = {
 		icon = mission_gawans_madrasar
 		required_missions = { hsn_house_wisdom }
 		position = 6
-		
+
 		provinces_to_highlight = {
 			owned_by = ROOT
-			NOT = { has_building = manufactory }
+			NOT = { has_manufactory_trigger = yes }
 		}
-		
+
 		trigger = {
 			num_of_owned_provinces_with = {
-				has_building = manufactory
-				value = 10
+				has_manufactory_trigger = yes
+				value = 20
 			}
 		}
-		
+
 		effect = {
 			if = {
 				limit = {
@@ -3148,12 +3143,12 @@ hsn_fifth_branch = {
 			}
 		}
 	}
-	
+
 	hsn_golden_age = {
 		icon = mission_islamic_golden_age
 		required_missions = { hsn_madrasas }
 		position = 8
-		
+
 		provinces_to_highlight = {
 			if = {
 				limit = {
@@ -3170,7 +3165,7 @@ hsn_fifth_branch = {
 				NOT = { tag = ROOT }
 			}
 		}
-		
+
 		trigger = {
 			if = {
 				limit = {
@@ -3204,7 +3199,7 @@ hsn_fifth_branch = {
 				full_idea_group = innovativeness_ideas
 			}
 		}
-		
+
 		effect = {
 			if = {
 				limit = {
@@ -3251,17 +3246,17 @@ hsn_fifth_branch = {
 			}
 		}
 	}
-	
+
 	hsn_sands_of_arabia = {
 		icon = mission_conquer_air
 		required_missions = { hsn_aden }
 		position = 10
-		
+
 		provinces_to_highlight = {
 			region = arabia_region
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
-		
+
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				region = arabia_region
@@ -3281,6 +3276,6 @@ hsn_fifth_branch = {
 			}
 		}
 	}
-	
-	
+
+
 }

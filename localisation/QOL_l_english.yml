@@ -12,6 +12,8 @@
  PR_critical_events_desc: "Check to see which critical events are still available, a green tick indicates it is available and a red cross indicates it has already been fired"
  PR_radical_reform_decision: "Radical Reforms"
  PR_military_reform_decision: "Military Reforms"
+ military_reform_cooldown: "Now's not the time"
+ military_reform_cooldown_modifier: "Military Reform Cooldown"
  PR_commandant_decision: "Inspirational Leader"
  PR_grand_captain_decision: "Grand Captain"
  PR_commandant_cooldown: "Inspirational Leader Cooldown"
